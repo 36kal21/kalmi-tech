@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KalMi Tech - Powerful Digital Solutions & Payment Systems</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. ለ Netlify Build ብቻ የሚያገለግል Hidden Form (ለተጠቃሚ አይታይም) -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="fullName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <select name="service"></select>
+  </form>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">KalMi <span>Tech</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#contact" class="btn-nav">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>Powerful Digital Solutions & Payment Systems. <span>የተሻለ የዲጂታል እና ክፍያ መፍትሄ::</span></h1>
+        <p class="desc-en">Get quality Online Ticketing, Payment Systems, Booking & Reservation Applications at affordable prices.</p>
+        <p class="desc-am">የኦንላይን ቲኬት መሸጫ፣ ሎጎ (አርማ) እና ብራንድ ዲዛይን፣ የኦንላይን ክፍያ መቀበያ፣ የሰብስክሪፕሽን ክፍያ መቀበያ እና ማስተዳደሪያ፣ የቡኪንግ እና ሪዘርቬሽን መተግበሪያዎችን በጥራት እና በተመጣጣኝ ዋጋ ያገኛሉ::</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-blue">GET STARTED</a>
+          <a href="#services" class="btn btn-outline">OUR SERVICES</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/kalmi.jpg" alt="KalMi Tech Team">
+      </div>
+    </div>
+    <div class="scroll-link">
+      <a href="#about">More about our company <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container about-container">
+      <div class="about-image">
+        <img src="assets/images/founder-kalkidan.png" alt="Kalkidan Mihretie">
+      </div>
+      <div class="about-content">
+        <span class="sub-heading">ABOUT US</span>
+        <h2>Meet Our Founder <span>| ስለ መስራች</span></h2>
+        <h3>Kalkidan Mihretie</h3>
+        <p class="badge-text">Founder & Full Stack Developer | <i class="fa-solid fa-graduation-cap"></i> B.Sc Computer Science | Graduated June 2025</p>
+        <p>Welcome to KalMi Tech! I'm Kalkidan Mihretie, a passionate full stack web developer dedicated to bridging the gap between complex technology and simple, effective solutions.</p>
+        <p>After graduating with my Bachelor's degree in Computer Science in 2025, I founded KalMi Tech with a clear vision: to make quality digital solutions accessible and affordable for businesses in Ethiopia.</p>
+
+        <div class="mission-card">
+          <h4>My Mission:</h4>
+          <p>I believe every business deserves professional, reliable technology solutions—without breaking the bank.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services section-padding bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services <span>የምንሰጣቸው አገልግሎቶች</span></h2>
+        <p>Comprehensive digital solutions for your business needs | ለቢዝነስዎ የሚሆኑ ሙሉ የዲጂታል መፍትሄዎች</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="card">
+          <div class="card-icon"><i class="fa-regular fa-clone"></i></div>
+          <h3>Online Ticket System <span>የኦንላይን ቲኬት መሸጫ</span></h3>
+          <ul>
+            <li>Event Ticketing</li>
+            <li>Bus/Flight Booking</li>
+            <li>Cinema Tickets</li>
+            <li>QR Code Generation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-regular fa-credit-card"></i></div>
+          <h3>Online Payment Gateway <span>ኦንላይን ክፍያ መቀበያ</span></h3>
+          <ul>
+            <li>Telebirr Integration</li>
+            <li>CBE Birr Payment</li>
+            <li>Card Payments</li>
+            <li>Secure Transactions</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+          <h3>Subscription Management <span>የሰብስክሪፕሽን ስርዓት</span></h3>
+          <ul>
+            <li>Recurring Payments</li>
+            <li>Auto Renewal</li>
+            <li>Membership Plans</li>
+            <li>Payment Tracking</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-regular fa-calendar-check"></i></div>
+          <h3>Booking & Reservation <span>የቡኪንግ እና ሪዘርቬሽን</span></h3>
+          <ul>
+            <li>Hotel Booking</li>
+            <li>Restaurant Reservation</li>
+            <li>Appointment System</li>
+            <li>Real-time Availability</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Student Registration <span>የኦንላይን የተማሪ ምዝገባ</span></h3>
+          <ul>
+            <li>Student Enrollment</li>
+            <li>Course Registration</li>
+            <li>Document Upload</li>
+            <li>Automated Confirmation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <h3>Hospital Appointment <span>የሆስፒታል ቀጠሮ ስርዓት</span></h3>
+          <ul>
+            <li>Doctor Booking</li>
+            <li>Schedule Management</li>
+            <li>Patient Records</li>
+            <li>SMS/Email Reminders</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Website Development <span>ድረ-ገጽ ማዘጋጀት</span></h3>
+          <ul>
+            <li>Custom Websites</li>
+            <li>E-Commerce Sites</li>
+            <li>Responsive Design</li>
+            <li>SEO Optimized</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3>Logo & Brand Design <span>ሎጎ(መለያ) እና ብራንድ ዲዛይን</span></h3>
+          <ul>
+            <li>Custom Logo Creation</li>
+            <li>Brand Identity</li>
+            <li>Color & Font Selection</li>
+            <li>Business Card Design</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Mobile App Development <span>የሞባይል አፕሊኬሽን ግንባታ</span></h3>
+          <ul>
+            <li>Android Apps</li>
+            <li>iOS Apps</li>
+            <li>Cross-platform</li>
+            <li>UI/UX Design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-us" class="why-us section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose KalMi Tech?</h2>
+        <p class="amharic-sub">ለምን ካልሚ ቴክን ይመርጣሉ?</p>
+      </div>
+
+      <div class="why-us-wrapper">
+        <div class="why-us-image">
+          <img src="assets/images/KM team.png" alt="Why Choose Us">
+        </div>
+
+        <div class="why-us-grid">
+          <div class="why-card">
+            <div class="why-icon green"><i class="fa-solid fa-ribbon"></i></div>
+            <div>
+              <h4>Quality Work | ጥራት ያለው ስራ</h4>
+              <p>Professional and high-quality solutions</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon green"><i class="fa-solid fa-tag"></i></div>
+            <div>
+              <h4>Affordable Price | በተመጣጣኝ ዋጋ</h4>
+              <p>Tailored to your budget</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon green"><i class="fa-regular fa-clock"></i></div>
+            <div>
+              <h4>On-Time Delivery | ወቅታዊ አቅርቦት</h4>
+              <p>Fast and reliable service</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon green"><i class="fa-solid fa-headset"></i></div>
+            <div>
+              <h4>Direct Support | ሁልጊዜ ዝግጁ</h4>
+              <p>Dedicated assistance throughout your project</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon green"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h4>Secure Systems | ደህንነቱ የተጠበቀ ስርዓት</h4>
+              <p>Encrypted Transactions & Data Protection</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon green"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <h4>Expert Execution | የክህሎት ማረጋገጫ</h4>
+              <p>Built with modern industry standards</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-us-cta">
+        <a href="#contact" class="btn btn-green">Get Started Today <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+<!-- =========================
+     CONTACT US SECTION
+========================= -->
+<section id="contact" class="contact section-padding bg-light">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2>
+        Contact Us <span>አግኙን</span>
+      </h2>
+      <p>Get in touch with us today</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- =========================
+           CONTACT INFORMATION
+      ========================== -->
+      <div class="contact-cards">
+
+        <!-- Phone -->
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div>
+            <h4>Phone</h4>
+            <p>+251 978 503 496</p>
+            <p>+251 725 25 37 39</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div>
+            <h4>Email</h4>
+            <p>info@kalmitech.com</p>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div>
+            <h4>Location</h4>
+            <p>Addis Ababa, Ethiopia</p>
+          </div>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+
+          <div>
+            <h4>Working Hours</h4>
+            <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+
+      </div>
+
+<!-- =========================
+     CONTACT FORM
+========================== -->
+<div class="contact-form-box">
+
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    id="contactForm"
+  >
+
+    <!-- Netlify form identification -->
+    <input type="hidden" name="form-name" value="contact" />
+
+    <!-- Email notification subject -->
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Contact Request - KalMi Tech"
+    />
+
+    <!-- HONEYPOT SPAM PROTECTION -->
+    <div style="display:none;">
+      <label>
+        Don't fill this out if you're human:
+        <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
+      </label>
+    </div>
+
+    <!-- FULL NAME -->
+    <div class="form-group">
+      <label for="fullName">Full Name / ሙሉ ስም</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        placeholder="Abebe Kebede"
+        autocomplete="name"
+        required
+      />
+    </div>
+
+    <!-- EMAIL -->
+    <div class="form-group">
+      <label for="email">Email / ኢሜይል</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@email.com"
+        autocomplete="email"
+        required
+      />
+    </div>
+
+    <!-- PHONE -->
+    <div class="form-group">
+      <label for="phone">
+        Phone / ስልክ
+        <span class="format-note">(Format: 09XXXXXXXX / 07XXXXXXXX)</span>
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="0912345678"
+        pattern="^(09|07)[0-9]{8}$"
+        maxlength="10"
+        minlength="10"
+        autocomplete="tel"
+        required
+      />
+    </div>
+
+    <!-- SERVICE -->
+    <div class="form-group">
+      <label for="service">Service Needed / አገልግሎት</label>
+      <select id="service" name="service" required>
+        <option value="" selected disabled>Select / ይምረጡ</option>
+        <option value="Online Ticket System">Online Ticket System</option>
+        <option value="Online Payment Gateway">Online Payment Gateway</option>
+        <option value="Subscription Management">Subscription Management</option>
+        <option value="Booking & Reservation">Booking & Reservation</option>
+        <option value="Student Registration">Student Registration</option>
+        <option value="Hospital Appointment">Hospital Appointment</option>
+        <option value="Website Development">Website Development</option>
+        <option value="Logo & Brand Design">Logo & Brand Design</option>
+        <option value="Mobile App Development">Mobile App Development</option>
+      </select>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="form-group">
+      <label for="message">Message / መልዕክት</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="How can we help you?"
+      ></textarea>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" class="btn btn-blue btn-full" id="submitBtn">
+      <i class="fa-solid fa-paper-plane"></i>
+      Send Message / መልዕክት ይላኩ
+    </button>
+
+  </form>
+
+</div>
+
+    </div>
+  </div>
+</section>
+
+ 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-logo">kalmitech.com</h3>
+        <p>Providing quality digital solutions at affordable prices. Your success is our priority.</p>
+        <div class="footer-socials">
+          <a href="https://facebook.com/kalmitech" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://twitter.com/kalmitech" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://linkedin.com/company/kalmitech" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://t.me/kalmitech" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://wa.me/251978503496" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#services">Online Ticketing</a></li>
+          <li><a href="#services">Payment Systems</a></li>
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">Mobile Apps</a></li>
+          <li><a href="#services">Logo Design</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone"></i> +251 978 50 34 96</li>
+          <li><i class="fa-solid fa-phone"></i> +251 725 25 37 39</li>
+          <li><i class="fa-solid fa-envelope"></i> info@kalmitech.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> Addis Ababa, Ethiopia</li>
+          <li><i class="fa-regular fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> KalMi Tech. All rights reserved. | Founded by Kalkidan Mihretie.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/251978503496" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

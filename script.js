@@ -64,13 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = new FormData(myForm);
     
     // Explicitly add form-name for Netlify API processing
-    const params = new URLSearchParams(formData);
-    params.set("form-name", "contact");
+    formData.set("form-name", "contact");
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: params.toString(),
+      body: new URLSearchParams(formData).toString(),
     })
       .then((response) => {
         if (response.ok) {
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
             submitBtn.innerHTML = originalBtnText;
           }, 5000);
         } else {
-          throw new Error("Server response was not ok");
+          throw new Error("Form submission failed with status " + response.status);
         }
       })
       .catch((error) => {

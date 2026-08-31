@@ -59,17 +59,24 @@ document.addEventListener("DOMContentLoaded", function () {
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending... / በመላክ ላይ...';
 
-    // Build URLSearchParams directly from the form
+    // 1. የ Form መረጃዎችን በሙሉ በ URLSearchParams መሰብሰብ
     const myForm = e.target;
     const formData = new FormData(myForm);
-    
-    // Explicitly add form-name for Netlify API processing
-    formData.set("form-name", "contact");
+    const params = new URLSearchParams(formData);
+
+    // 2. Netlify form-name ማረጋገጥ
+    params.set("form-name", "contact");
+
+    // 3. መልእክቱ (message) በትክክል መያዙን ማረጋገጥ
+    const messageInput = document.getElementById("message");
+    if (messageInput) {
+      params.set("message", messageInput.value);
+    }
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: params.toString(),
     })
       .then((response) => {
         if (response.ok) {
@@ -88,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             submitBtn.innerHTML = originalBtnText;
           }, 5000);
         } else {
-          throw new Error("Form submission failed with status " + response.status);
+          throw new Error("Server response was not ok");
         }
       })
       .catch((error) => {

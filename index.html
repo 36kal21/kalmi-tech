@@ -344,71 +344,118 @@
 ========================== -->
 <div class="contact-form-box">
 
-<form
-  name="contact"
-  method="POST"
-  action="/"
-  data-netlify="true"
-  data-netlify-honeypot="bot-field"
-  id="contactForm"
+<!-- =========================
+     CONTACT FORM
+========================== -->
+<div class="contact-form-box">
+
+ <form
+  name="contact"
+  method="POST"
+  action="/"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  id="contactForm"
 >
-  <input type="hidden" name="form-name" value="contact" />
-  <input type="hidden" name="_subject" value="New Contact Request - KalMi Tech" />
 
-  <!-- HONEYPOT -->
-  <div style="display:none;">
-    <label>
-      Don't fill this out if you're human:
-      <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
-    </label>
-  </div>
+    <!-- Netlify form identification -->
+    <input type="hidden" name="form-name" value="contact" />
 
-  <!-- FULL NAME -->
-  <div class="form-group">
-    <label for="fullName">Full Name / ሙሉ ስም</label>
-    <input type="text" id="fullName" name="fullName" placeholder="Abebe Kebede" autocomplete="name" required />
-  </div>
+    <!-- Email notification subject -->
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Contact Request - KalMi Tech"
+    />
 
-  <!-- EMAIL -->
-  <div class="form-group">
-    <label for="email">Email / ኢሜይል</label>
-    <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required />
-  </div>
+    <!-- HONEYPOT SPAM PROTECTION -->
+    <div style="display:none;">
+      <label>
+        Don't fill this out if you're human:
+        <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
+      </label>
+    </div>
 
-  <!-- PHONE -->
-  <div class="form-group">
-    <label for="phone">Phone / ስልክ</label>
-    <input type="tel" id="phone" name="phone" placeholder="0912345678" pattern="^(09|07)[0-9]{8}$" maxlength="10" minlength="10" autocomplete="tel" required />
-  </div>
+    <!-- FULL NAME -->
+    <div class="form-group">
+      <label for="fullName">Full Name / ሙሉ ስም</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        placeholder="Abebe Kebede"
+        autocomplete="name"
+        required
+      />
+    </div>
 
-  <!-- SERVICE -->
-  <div class="form-group">
-    <label for="service">Service Needed / አገልግሎት</label>
-    <select id="service" name="service" required>
-      <option value="" selected disabled>Select / ይምረጡ</option>
-      <option value="Online Ticket System">Online Ticket System</option>
-      <option value="Online Payment Gateway">Online Payment Gateway</option>
-      <option value="Subscription Management">Subscription Management</option>
-      <option value="Booking & Reservation">Booking & Reservation</option>
-      <option value="Student Registration">Student Registration</option>
-      <option value="Hospital Appointment">Hospital Appointment</option>
-      <option value="Website Development">Website Development</option>
-      <option value="Logo & Brand Design">Logo & Brand Design</option>
-      <option value="Mobile App Development">Mobile App Development</option>
-    </select>
-  </div>
+    <!-- EMAIL -->
+    <div class="form-group">
+      <label for="email">Email / ኢሜይል</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@email.com"
+        autocomplete="email"
+        required
+      />
+    </div>
 
-  <!-- MESSAGE (እዚች ጋር <textarea> እና </textarea> መሃል ምንም ክፍተት አይኑር) -->
-  <div class="form-group">
-    <label for="message">Message / መልዕክት</label>
-    <textarea id="message" name="message" rows="5" placeholder="How can we help you?"></textarea>
-  </div>
+    <!-- PHONE -->
+    <div class="form-group">
+      <label for="phone">
+        Phone / ስልክ
+        <span class="format-note">(Format: 09XXXXXXXX / 07XXXXXXXX)</span>
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="0912345678"
+        pattern="^(09|07)[0-9]{8}$"
+        maxlength="10"
+        minlength="10"
+        autocomplete="tel"
+        required
+      />
+    </div>
 
-  <!-- SUBMIT BUTTON -->
-  <button type="submit" class="btn btn-blue btn-full" id="submitBtn">
-    <i class="fa-solid fa-paper-plane"></i> Send Message / መልዕክት ይላኩ
-  </button>
-</form>
+    <!-- SERVICE -->
+    <div class="form-group">
+      <label for="service">Service Needed / አገልግሎት</label>
+      <select id="service" name="service" required>
+        <option value="" selected disabled>Select / ይምረጡ</option>
+        <option value="Online Ticket System">Online Ticket System</option>
+        <option value="Online Payment Gateway">Online Payment Gateway</option>
+        <option value="Subscription Management">Subscription Management</option>
+        <option value="Booking & Reservation">Booking & Reservation</option>
+        <option value="Student Registration">Student Registration</option>
+        <option value="Hospital Appointment">Hospital Appointment</option>
+        <option value="Website Development">Website Development</option>
+        <option value="Logo & Brand Design">Logo & Brand Design</option>
+        <option value="Mobile App Development">Mobile App Development</option>
+      </select>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="form-group">
+      <label for="message">Message / መልዕክት</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="How can we help you?"
+      ></textarea>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" class="btn btn-blue btn-full" id="submitBtn">
+      <i class="fa-solid fa-paper-plane"></i>
+      Send Message / መልዕክት ይላኩ
+    </button>
+
+  </form>
 </div>
 
     </div>

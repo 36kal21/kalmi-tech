@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = new FormData(myForm);
     const params = new URLSearchParams(formData);
 
-     // 2. Netlify form-name ማረጋገጥ
-     params.set("form-name", "kalmi-contact");
+    // 2. Netlify form-name ማረጋገጥ
+    params.set("form-name", "contact");
 
     // 3. መልእክቱ (message) በትክክል መያዙን ማረጋገጥ
     const messageInput = document.getElementById("message");
